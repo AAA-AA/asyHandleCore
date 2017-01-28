@@ -1,0 +1,72 @@
+<div class="modal fade" id="addSmsTaskModel" tabindex="-1" role="dialog" aria-labelledby="myEditModelLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title " id="addSmsModelLabel">任务创建</h4>
+            </div>
+
+            <div class="modal-body">
+                <form class="form-horizontal" role="form" name="smsTaskReq" id="addForm" method="post" action="/smsPromotionMng/doCreate" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div hidden="true">
+                            <input type="text" id="smsStarter" name="smsStarter" value="${loginUser.username}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">任务名称</label>
+                        <div class="col-sm-5">
+                            <input type="text" id="taskName" name="taskName" class="form-control" placeholder="填写任务名称" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">业务类型</label>
+                        <label class="radio-inline col-sm-2  control-label">
+                            <input type="radio" name="isAct" id="isAct" value="1" checked="">营销短信
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="bizType" class="col-sm-2 control-label">业务部门</label>
+                        <div class="col-sm-3">
+                            <select class="form-control" id="bizType" name="bizType">
+                                <option value="1">游戏</option>
+                                <option value="2">直播</option>
+                                <option value="3">账号</option>
+                                <option value="4">passport</option>
+                                <option value="5">支付</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="smsSendTime" class="col-sm-2 control-label">发送时间</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="smsSendTime" class="form-control form_datetime" data-date-format="yyyy-mm-dd hh:ii:ss" id="smsSendTime">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">用户库</label>
+                        <label class="radio-inline col-sm-2  control-label">
+                            <input type="radio" value="1" class="a-smsSourceType" name="smsSourceType" id="tels">手机号
+                        </label>
+                        <input type="file" id="telsFile" name="telsFile" class="input-inline col-sm-4" style="margin-top: 6px;">
+
+                        <label class="radio-inline col-sm-1  control-label">
+                            <input type="radio" value="2" class="a-smsSourceType" name="smsSourceType" id="mids">MID
+                        </label>
+                        <input type="file" id="midsFile" name="midsFile" class="input-inline col-sm-4" style="margin-top: 6px;"></div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">短信文案</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="smsContent" name="smsContent" rows="4" placeholder="请输入文案内容，最长200字符" maxlength="200"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary add-info">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
