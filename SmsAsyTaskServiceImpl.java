@@ -1,15 +1,15 @@
 package com.bilibili.sms.service.service.impl;
 
-import com.bilibili.common.enums.SmsSendCountEnum;
-import com.bilibili.common.enums.SmsSendStatusEnum;
-import com.bilibili.common.utils.ValidUtils;
-import com.bilibili.sms.persist.dto.thrid.UserInfo;
-import com.bilibili.sms.persist.model.SmsSendSource;
-import com.bilibili.sms.persist.model.SmsTask;
-import com.bilibili.sms.service.service.SmsScheduledTaskService;
-import com.bilibili.sms.service.service.SmsSendSourceService;
-import com.bilibili.sms.service.service.SmsTaskService;
-import com.bilibili.sms.service.service.UserInfoService;
+import com.cn.common.enums.SmsSendCountEnum;
+import com.cn.common.enums.SmsSendStatusEnum;
+import com.cn.common.utils.ValidUtils;
+import com.cn.sms.persist.dto.thrid.UserInfo;
+import com.cn.sms.persist.model.SmsSendSource;
+import com.cn.sms.persist.model.SmsTask;
+import com.cn.sms.service.service.SmsScheduledTaskService;
+import com.cn.sms.service.service.SmsSendSourceService;
+import com.cn.sms.service.service.SmsTaskService;
+import com.cn.sms.service.service.UserInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
